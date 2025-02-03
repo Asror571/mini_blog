@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bosh sahifa</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body class="container mt-4">
 
@@ -14,16 +13,8 @@
         <input type="text" name="q" class="form-control" placeholder="Blog qidiring..." value="{{ query }}">
     </form>
 
-    <a href="/add" class="btn btn-primary mb-3">Yangi post qo‘shish</a>
+    <h4>Yangi post qo'shish</h4>
 
-    <div class="list-group">
-        {% for post in posts %}
-            <a href="/blogs/{{ post.id }}" class="list-group-item list-group-item-action">
-                <h5 class="mb-1">{{ post.title }}</h5>
-                <small>{{ post.created_at }}</small>
-            </a>
-        {% endfor %}
-    </div>
 
 </body>
 </html>
