@@ -19,7 +19,7 @@ def save_posts(posts):
         json.dump(posts, file,)
 
 # Bosh sahifa (barcha postlar + qidiruv)
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def index():
     posts = load_posts()
     query = request.args.get("q", "")
@@ -28,7 +28,7 @@ def index():
     return render_template("index.html", posts=posts, query=query)
 
 # Yangi post qo‘shish
-@app.route("/add", methods=["GET", "POST"])
+@app.route("/add")
 def add_post():
     if request.method == "POST":
         title = request.form["title"]
